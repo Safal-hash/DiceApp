@@ -9,7 +9,7 @@ void main() {
           title: const Center(
             child: Text("Dice App"),
           ),
-          backgroundColor: Colors.redAccent,
+          backgroundColor: Colors.red,
         ),
         body: const DicePage(),
       ),
@@ -22,15 +22,32 @@ class DicePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Expanded(
-          child: Image.asset('images/dice1.png'),
+        Row(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Image.asset('images/dice1.png'),
+              ),
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Image.asset('images/dice2.png'),
+              ),
+            ),
+          ],
         ),
-        Expanded(
-          child: Image.asset('images/dice2.png'),
+        ElevatedButton(onPressed:(){},
+          style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.redAccent),
+              child: const Text("Roll the Dice"),
         ),
       ],
     );
   }
 }
+
