@@ -11,14 +11,16 @@ void main() {
           ),
           backgroundColor: Colors.red,
         ),
-        body: const DicePage(),
+        body:  DicePage(),
       ),
     ),
   );
 }
 
 class DicePage extends StatelessWidget {
-  const DicePage({super.key});
+   DicePage({super.key});
+
+  var leftDiceNumber = 6;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class DicePage extends StatelessWidget {
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Image.asset('images/dice1.png'),
+                child: Image.asset('images/dice$leftDiceNumber.png'),
               ),
             ),
             Expanded(
@@ -44,7 +46,7 @@ class DicePage extends StatelessWidget {
         ElevatedButton(onPressed:(){},
           style: ElevatedButton.styleFrom(
               backgroundColor: Colors.redAccent),
-              child: const Text("Roll It!"),
+              child: const Text("Roll The Dice!"),
         ),
       ],
     );
