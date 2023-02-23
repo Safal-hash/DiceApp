@@ -44,7 +44,7 @@ class DicePage extends StatelessWidget {
         ElevatedButton(onPressed:(){},
           style: ElevatedButton.styleFrom(
               backgroundColor: Colors.redAccent),
-              child: const Text("Roll the Dice"),
+              child: const Text("Roll It!"),
         ),
       ],
     );
